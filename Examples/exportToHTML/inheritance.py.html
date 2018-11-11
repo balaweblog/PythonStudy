@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>inheritance.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+inheritance.py</font>
+</center></td></tr></table>
+<pre><a name="l1"><span class="ln">1    </span></a><span class="s0">class </span><span class="s1">Student:</span>
+    schoolname = <span class="s2">'John Dewey'</span>
+
+    <span class="s0">def </span><span class="s1">printschooldetailsInfo(self):</span>
+        print(self.schoolname<span class="s0">, </span><span class="s2">&quot;Villupuram&quot;</span><span class="s1">)</span>
+
+
+student = Student()
+student.printschooldetailsInfo()
+
+
+<span class="s0">class </span><span class="s1">PostGraduduate(Student):</span>
+    schoolname = <span class="s2">&quot;Kamaraj College of Engineering &amp; Technology&quot;</span>
+
+    <span class="s0">def </span><span class="s1">printschooldetails(self):</span>
+        print(self.schoolname<span class="s0">, </span><span class="s2">&quot;Virudhunagar&quot;</span><span class="s1">)</span>
+
+    <span class="s0">def </span><span class="s1">printugschooldetails(self):</span>
+        super().printschooldetailsInfo()
+
+
+pg = PostGraduduate()
+pg.printschooldetails()
+pg.printugschooldetails()
+</pre>
+</body>
+</html>
